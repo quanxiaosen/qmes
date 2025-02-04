@@ -21,13 +21,13 @@ const router = new Router({
       path: '/user-management',
       name: 'UserManagement',
       component: UserManagement,
-      meta: { requiresAuth: true },  // 假设该页面也需要认证
+      meta: { requiresAuth: true },  // 该页面需要认证
     },
     {
       path: '/role-management',
       name: 'RoleManagement',
       component: RoleManagement,
-      meta: { requiresAuth: true },  // 假设该页面也需要认证
+      meta: { requiresAuth: true },  // 该页面需要认证
     },
     {
       path: '/login',

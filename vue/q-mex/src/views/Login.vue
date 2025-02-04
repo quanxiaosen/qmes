@@ -54,8 +54,9 @@ export default {
             if (user) {
               // 用户名密码匹配，设置登录状态
               localStorage.setItem("isLoggedIn", true); // 设置登录状态
+              localStorage.setItem("username",user.name)
               // 使用 Vue Router 跳转到目标页面
-              this.$router.push({ path: '/' });  // 跳转到 Dashboard 或主页
+              this.$router.push('/');  // 直接使用路径跳转
               window.location.reload();
             } else {
               // 用户名密码不匹配，提示错误

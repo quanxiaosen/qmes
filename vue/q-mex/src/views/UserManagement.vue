@@ -135,7 +135,8 @@ export default {
         birthdate: "", // 可以用空字符串或 null
         dept: "",
         hiredate: "",
-        employeestatus: "",
+        employeestatus: "Y",
+        password:"1234",
       },
     };
   },
@@ -187,9 +188,10 @@ export default {
           name: this.newUser.name,
           gender: this.newUser.gender,
           birthDate: this.newUser.birthdate,
-          dept: this.newUser.dept,
+          department: this.newUser.dept,
           hireDate: this.newUser.hiredate,
           employeeStatus: this.newUser.employeestatus,
+          password:this.newUser.password,
         });
         if (response.status === 200) {
           this.$message.success("新增用户成功");
@@ -222,7 +224,8 @@ export default {
         birthdate: "",
         dept: "",
         hiredate: "",
-        employeestatus: "",
+        employeestatus: "Y",
+        password: "1234"
       };
     },
   },

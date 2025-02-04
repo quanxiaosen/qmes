@@ -5,7 +5,6 @@ import com.example.qmex.Repository.UserRepository;
 import jdk.jfr.Description;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.Date;
 import java.util.List;
 
 @RestController
