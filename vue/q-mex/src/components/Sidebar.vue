@@ -65,7 +65,7 @@
         </template>
         <el-menu-item v-if="filterMenuItem('工单管理')" index="5-1">工单管理</el-menu-item>
         <el-menu-item v-if="filterMenuItem('工单开工')" index="5-2">工单开工</el-menu-item>
-        <el-menu-item v-if="filterMenuItem('工单打印')" index="5-3">工单打印</el-menu-item>
+        <el-menu-item v-if="filterMenuItem('工单打印')" index="/workOrderPrint">工单打印</el-menu-item>
         <el-menu-item v-if="filterMenuItem('工单跟踪')" index="5-4">工单跟踪</el-menu-item>
       </el-submenu>
 

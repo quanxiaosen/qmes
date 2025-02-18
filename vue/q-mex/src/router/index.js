@@ -4,8 +4,7 @@ import Dashboard from '@/views/Dashboard.vue'
 import UserManagement from '@/views/UserManagement.vue'
 import RoleManagement from "@/views/RoleManagemen.vue"
 import Login from "@/views/Login.vue"
-
-
+import WorkOrderPrint from "@/views/workOrderPrint"
 
 Vue.use(Router)
 
@@ -33,6 +32,12 @@ const router = new Router({
       path: '/login',
       name: 'Login',
       component: Login,
+    },
+    {
+      path:'/workOrderPrint',
+      name:'workOrderPrint',
+      component: WorkOrderPrint,
+   //   meta: { requiresAuth: true },
     },
     {
       path: "*",
