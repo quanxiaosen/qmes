@@ -5,6 +5,8 @@ import UserManagement from '@/views/UserManagement.vue'
 import RoleManagement from "@/views/RoleManagemen.vue"
 import Login from "@/views/Login.vue"
 import WorkOrderPrint from "@/views/workOrderPrint"
+import LabelPrint from "@/views/labelPrint";
+import DepartmentManagement from "@/views/DepartmentManagement";
 
 Vue.use(Router)
 
@@ -34,10 +36,19 @@ const router = new Router({
       component: Login,
     },
     {
+      path:'/labelPrint',
+      name:'LabelPrint',
+      component:LabelPrint,
+    },
+    {
       path:'/workOrderPrint',
       name:'workOrderPrint',
       component: WorkOrderPrint,
    //   meta: { requiresAuth: true },
+    },{
+      path:'/departmentManagement',
+      name:'departmentManagement',
+      component:DepartmentManagement,
     },
     {
       path: "*",

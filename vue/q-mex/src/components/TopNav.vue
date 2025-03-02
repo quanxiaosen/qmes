@@ -1,6 +1,6 @@
 <template>
   <el-header>
-    <div class="logo">q-mex管理系统</div>
+    <div class="logo">q-mes管理系统</div>
     <el-dropdown trigger="click">
       <span class="el-dropdown-link">
         {{ userName }}  <!-- 显示用户的名字 -->

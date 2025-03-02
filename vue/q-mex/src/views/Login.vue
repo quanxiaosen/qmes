@@ -44,7 +44,7 @@ export default {
           this.loading = true;
           try {
             // 向接口查询用户数据
-            const response = await axios.get("http://localhost:8090/users");
+            const response = await axios.get("http://localhost:8090/login");
 
             // 查询结果中是否有匹配的用户
             const user = response.data.find(

@@ -38,7 +38,7 @@
           <span>基础信息</span>
         </template>
         <el-menu-item v-if="filterMenuItem('车间管理')" index="3-1">车间管理</el-menu-item>
-        <el-menu-item v-if="filterMenuItem('部门管理')" index="3-2">部门管理</el-menu-item>
+        <el-menu-item v-if="filterMenuItem('部门管理')" index="/DepartmentManagement">部门管理</el-menu-item>
         <el-menu-item v-if="filterMenuItem('仓库管理')" index="3-3">仓库管理</el-menu-item>
         <el-menu-item v-if="filterMenuItem('客户管理')" index="3-4">客户管理</el-menu-item>
         <el-menu-item v-if="filterMenuItem('供应商管理')" index="3-5">供应商管理</el-menu-item>
@@ -66,7 +66,7 @@
         <el-menu-item v-if="filterMenuItem('工单管理')" index="5-1">工单管理</el-menu-item>
         <el-menu-item v-if="filterMenuItem('工单开工')" index="5-2">工单开工</el-menu-item>
         <el-menu-item v-if="filterMenuItem('工单打印')" index="/workOrderPrint">工单打印</el-menu-item>
-        <el-menu-item v-if="filterMenuItem('工单跟踪')" index="5-4">工单跟踪</el-menu-item>
+        <el-menu-item v-if="filterMenuItem('工单跟踪')" index="/labelPrint">标签打印</el-menu-item>
       </el-submenu>
 
       <!-- 品质管理子菜单 -->

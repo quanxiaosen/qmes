@@ -2,32 +2,44 @@ package com.example.qmex.controller;
 
 import com.example.qmex.Entity.User;
 import com.example.qmex.Repository.UserRepository;
+import com.example.qmex.Service.UserService;
 import jdk.jfr.Description;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 
 @RestController
 @CrossOrigin(origins = "http://localhost:8081", allowCredentials = "true")
 public class UserController {
 
     private final UserRepository userRepository;  // 使用构造函数注入
+    @Autowired
+    private  UserService userService;
 
     public UserController(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
-    @RequestMapping("/test-db")
-    public String testDbConnection() {
-        if (userRepository.count() > 0) {
-            return String.valueOf(userRepository.count());
+    @GetMapping("/users")
+    public Page<User> getUsers(@RequestParam(defaultValue = "0")int page,
+                               @RequestParam(defaultValue = "5")int size,
+                               @RequestParam(required = false) String search) {
+        Pageable pageable = PageRequest.of(page, size);
+
+        if (search != null && !search.trim().isEmpty()) {
+            return userRepository.findByNameContaining(search, pageable);
         } else {
-            return "数据库连接成功，但没有数据。";
+            return userRepository.findAll(pageable);
         }
     }
 
-    @GetMapping("/users")
-    public List<User> GetAllUsers() {
+    @GetMapping("/login")
+    public List<User> getUser(){
         return userRepository.findAll();
     }
 
